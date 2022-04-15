@@ -1,0 +1,68 @@
+[
+  {
+    "Name": "iPhone 13 Pro Max",
+    "Price": 1000,
+    "IsDiscount": false,
+    "DiscountPrice": null,
+    "Amount": 10,
+    "PictureUrl": "images/products/13promax.png",
+    "Description": "Lorem ipsum dolor.",
+    "ProductCategoryId": 1,
+    "ProductBrandId": 1
+  },
+  {
+    "Name": "Galaxy S22 Ultra",
+    "Price": 900,
+    "IsDiscount": false,
+    "DiscountPrice": null,
+    "Amount": 9,
+    "PictureUrl": "images/products/s22ultra.png",
+    "Description": "Lorem ipsum dolor.",
+    "ProductCategoryId": 1,
+    "ProductBrandId": 2
+  },
+  {
+    "Name": "Pixel 6 Pro",
+    "Price": 800,
+    "IsDiscount": false,
+    "DiscountPrice": null,
+    "Amount": 9,
+    "PictureUrl": "images/products/pixel6pro.png",
+    "Description": "Lorem ipsum dolor.",
+    "ProductCategoryId": 1,
+    "ProductBrandId": 3
+  },
+  {
+    "Name": "ENVY 17t-ch000",
+    "Price": 1300,
+    "IsDiscount": true,
+    "DiscountPrice": 1000,
+    "Amount": 10,
+    "PictureUrl": "images/products/envy.png",
+    "Description": "Lorem ipsum dolor.",
+    "ProductCategoryId": 2,
+    "ProductBrandId": 4
+  },
+  {
+    "Name": "ROG Flow Z13 (2022) GZ301ZE",
+    "Price": 900,
+    "IsDiscount": false,
+    "DiscountPrice": null,
+    "Amount": 9,
+    "PictureUrl": "images/products/rogflow.png",
+    "Description": "Lorem ipsum dolor.",
+    "ProductCategoryId": 2,
+    "ProductBrandId": 5
+  },
+  {
+    "Name": "Pavillion TG01-2170m",
+    "Price": 2000,
+    "IsDiscount": false,
+    "DiscountPrice": null,
+    "Amount": 9,
+    "PictureUrl": "images/products/pavillion.png",
+    "Description": "Lorem ipsum dolor.",
+    "ProductCategoryId": 3,
+    "ProductBrandId": 4
+  }
+]
