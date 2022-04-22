@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Dtos;
+using API.Errors;
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
@@ -13,9 +14,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProductsController : ControllerBase
+    public class ProductsController : BaseApiController
     {
         private readonly IGenericRepository<Product> productsRepo;
         private readonly IGenericRepository<ProductBrand> productBrandRepo;
@@ -39,22 +38,23 @@ namespace API.Controllers
 
             var products = await productsRepo.ListAsync(spec);
             // var newProducts = products.Select(product => mapper.Map<Product,ProductToReturnDto>(product)).ToList();
-            
-            return Ok(mapper.Map<IReadOnlyList<Product>,IReadOnlyList<ProductToReturnDto>>(products));
+
+            return Ok(mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products));
         }
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id)
         {
             var spec = new ProductsWithTypesAndBrandsSpecification(id);
 
             var product = await productsRepo.GetEntityWithSpec(spec);
-
             if (product == null)
             {
-                return NotFound();
+                return NotFound(new ApiResponse(404, "Product does not exist!"));
             }
 
-            return Ok(mapper.Map<Product,ProductToReturnDto>(product));
+            return Ok(mapper.Map<Product, ProductToReturnDto>(product));
         }
         [HttpGet("categories")]
         public async Task<ActionResult<IReadOnlyList<ProductCategory>>> GetCategories()
