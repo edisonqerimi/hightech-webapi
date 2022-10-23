@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/admin.css">
+    <title>HIGH Tech - Administration</title>
+</head>
+
+<body>
+    <nav id="nav"></nav>
+    <nav id="sidebar"></nav>
+    <div class="banner hidden"></div>
+    <div class="admin container-height container">
+        <h2>Users Management</h2>
+        <div id="editModal" class="modal hidden">
+            <div class="center-modal">
+                <form id="editSection" class="form">
+                    <div id="editTitle">Edit user</div>
+                    <div id="validEdit" class="validation"></div>
+                    <div class="form-control">
+                        <label for="editedUsername">Username</label>
+                        <input class="edit-input" id="editedUsername" type="text">
+                    </div>
+                    <div class="form-control">
+                        <label for="editedFirst">First name</label>
+                        <input class="edit-input" id="editedFirst" type="text">
+                    </div>
+                    <div class="form-control">
+                        <label for="editedLast">Last name</label>
+                        <input class="edit-input" id="editedLast" type="text">
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="btn btn-info">Update user</button>
+                        <button id="hideEdit" class="btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="deleteModal" class="modal hidden">
+            <div class="center-modal">
+                <div id="deleteSection" class="form">
+                    <h3 style="margin: 0;">Are you sure you want to remove user <span class="validation deleteTitle"></span>?</h3>
+                    <div class="validation" id="validDelete"></div>
+                    <div class="buttons">
+                        <button id="deleteUser" class="btn btn-red">Remove</button>
+                        <button id="hideDelete" class="btn">Cancel</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="table"></div>
+    </div>
+    <footer class="footer"></footer>
+    <script src="./js/partials.js"></script>
+    <script type="module" src="./js/initUsers.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/administration.js"></script>
+</body>
+
+</html>

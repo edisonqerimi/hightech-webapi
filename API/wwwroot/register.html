@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Tech - Register</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+
+<body>
+    <nav id="nav"></nav>
+    <aside id="sidebar"></aside>
+    <section style="display: none;" class="banner"></section>
+    <section class="container-height cont-center">
+        <form id="register-Form" class="form">
+            <div class="login-header">
+                <div class="login-title">Sign Up</div>
+                <div class="no-account">
+                    Have account?
+                    <a href="./login.html" class="registernow">Login</a>.
+                </div>
+            </div>
+            <div class="validation"></div>
+            <div class="form-control">
+                <label for="firstname">First name</label>
+                <input required placeholder="Enter first name" name="firstname" id="firstname" />
+            </div>
+            <div class="form-control">
+                <label for="lastname">Last name</label>
+                <input required placeholder="Enter last name"  name="lastname" id="lastname" />
+            </div>
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input required placeholder="Enter username"  name="username" id="username" />
+            </div>
+            <div class="form-control">
+                <label for="email">Email address</label>
+                <input required type="email" placeholder="Enter email"  name="email" id="email" />
+            </div>
+            <div class="form-control">
+                <label for="confirm-Email">Confirm email</label>
+                <input required type="email" placeholder="Confirm email"  name="confirm-email" id="confirm-Email" />
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input required placeholder="Enter password" type="password"  name="password" id="password" />
+            </div>
+            <div class="form-control">
+                <label for="confirm-Password">Confirm password</label>
+                <input required placeholder="Enter password" type="password"  name="confirm-password" id="confirm-Password" />
+            </div>
+            <div class="buttons">
+                <button class="btn btn-info">Register</button>
+            </div>
+        </form>
+    </section>
+    <footer class="footer"></footer>
+    <script src="./js/partials.js"></script>
+    <script type="module" src="./js/initUsers.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

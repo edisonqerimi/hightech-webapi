@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Tech - Login</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+
+<body>
+    <nav id="nav"></nav>
+    <aside id="sidebar"></aside>
+    <section style="display: none;" class="banner"></section>
+    <section class="login-section container-height cont-center">
+        <form id="loginForm" class="form" action="">
+            <div class="admin">
+                <span>Login as admin</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div class="admin-info">
+                    <span>Username: eddqerimi</span>
+                    <span>Password: password</span>
+                </div>
+            </div>
+            <div class="login-header">
+                <div class="login-title">Log in</div>
+                <div class="no-account">
+                    No account?
+                    <a href="./register.html" class="registernow">Sign Up</a>.
+                </div>
+            </div>
+            <div class="validation"></div>
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input placeholder="Enter username" name="username" id="username" />
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter password" name="password" id="password" />
+            </div>
+            <div class="buttons">
+                <button class="btn btn-info">Login</button>
+            </div>
+        </form>
+    </section>
+    <footer class="footer"></footer>
+    <script src="./js/partials.js"></script>
+    <script type="module" src="./js/initUsers.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

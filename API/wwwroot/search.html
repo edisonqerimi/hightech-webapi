@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIGH Tech</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/shop.css">
+</head>
+<body>
+    <nav id="nav"></nav>
+
+    <aside id="sidebar"></aside>
+
+    <section class="hidden banner"></section>
+    <section class="container-height container">
+        <div id="searching">Search results for: <span id="search-Param"></span></div>
+        <div style="width: 100%;" id="products" class="products"></div>
+    </section>
+    <footer class="footer"></footer>
+    <script src="./js/partials.js"></script>
+    <script src="./js/index.js"></script>
+    <script type="module" src="./js/search.js"></script>
+    <script src="./js/addToCart.js"></script>
+    <style>
+        .container{
+            padding: 0 1.2rem;
+        }
+        #searching{
+            font-size: 2.4rem;
+            color: #050401;
+            margin: 2.4rem 0;
+        }
+        #search-Param{
+            color: #307692;
+        }
+        @media screen and (max-width:768px) {
+            
+        .products{
+            padding:0 3.2rem;
+        }
+        }
+    </style>
+</body>
+</html>
