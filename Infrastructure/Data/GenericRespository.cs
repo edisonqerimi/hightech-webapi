@@ -17,6 +17,12 @@ namespace Infrastructure.Data
         {
             this.context = context;
         }
+
+        public async Task<long> CountAsync(ISpecification<T> spec)
+        {
+            return await ApplySpecification(spec).CountAsync();
+        }
+
         public async Task<IReadOnlyList<T>> GetAllAsync()
         {
             return await context.Set<T>().ToListAsync();
